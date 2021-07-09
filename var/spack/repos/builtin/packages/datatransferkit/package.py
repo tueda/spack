@@ -36,6 +36,7 @@ class Datatransferkit(CMakePackage):
     depends_on('trilinos+stratimikos+belos', when='@master')
     depends_on('trilinos@13:13.99', when='@3.1-rc2')
 
+    patch('600.diff')
     def cmake_args(self):
         spec = self.spec
         from_variant = self.define_from_variant
