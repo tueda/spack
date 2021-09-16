@@ -19,6 +19,7 @@ class Datatransferkit(CMakePackage):
     maintainers = ['Rombur']
 
     version('master', branch='master', submodules=True)
+    version('3.1', branch='master', submodules=True)
     version('3.1-rc2', commit='1abc1a43b33dffc7a16d7497b4185d09d865e36a', submodules=True)
 
     variant('external-arborx', default=False,
@@ -36,7 +37,8 @@ class Datatransferkit(CMakePackage):
     depends_on('trilinos+stratimikos+belos', when='@master')
     depends_on('trilinos@13:13.99', when='@3.1-rc2')
 
-    patch('600.diff')
+    patch('600.diff', when='@master')
+    patch('600.diff', when='@3.1')
     def cmake_args(self):
         spec = self.spec
         from_variant = self.define_from_variant
