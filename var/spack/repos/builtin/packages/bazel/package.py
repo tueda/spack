@@ -18,6 +18,7 @@ class Bazel(Package):
 
     maintainers = ['adamjstewart']
 
+    version('3.5.1',  sha256='67eae714578b22d24192b0eb3a2d35b07578bbd57a33c50f1e74f8acd6378b3c')
     version('3.5.0',  sha256='334429059cf82e222ca8a9d9dbbd26f8e1eb308613463c2b8655dd4201b127ec')
     version('3.4.1',  sha256='27af1f11c8f23436915925b25cf6e1fb07fccf2d2a193a307c93437c60f63ba8')
     version('3.4.0',  sha256='7583abf8905ba9dd5394294e815e8873635ac4e5067e63392e8a33b397e450d8')
